@@ -5,12 +5,3 @@ export async function getAllFeeRates(testnet) {
   fees = JSON.parse(fees);
   return fees;
 }
-function isValidJson(content) {
-  if (!content) return;
-  try {
-    var json = JSON.parse(content);
-  } catch (e) {
-    return;
-  }
-  return true;
-}

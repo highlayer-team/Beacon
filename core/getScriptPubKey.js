@@ -13,7 +13,6 @@ export async function getScriptPubKey(
     bitcoin.initEccLib(ecc);
     let prefix = testnet ? "tb" : "bc";
     let scriptPubKey;
-    console.log(address);
     if (address.startsWith("1")) {
       scriptPubKey = bitcoin.payments.p2pkh({ address });
     } else if (address.startsWith("3")) {
